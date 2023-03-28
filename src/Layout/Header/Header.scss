@@ -2,150 +2,232 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 .header_wrapper {
-  position: sticky top;
-  display: flex;
-  justify-content: space-between;
+   position: sticky;
+   top: 0;
+   display: flex;
+   justify-content: space-between;
+   z-index: 10;
 
-  padding: 10px 80px;
+   padding: 10px 80px;
 
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  box-shadow: 0px -4px 27px rgba(0, 0, 0, 0.25);
+   @media (min-width: 768px) and (max-width: 1025px) {
+      padding: 10px 40px;
+   }
 
-  &_leftcol {
-    display: flex;
-    align-content: center;
-    column-gap: 20px;
-    justify-content: start;
-
-    img {
-      margin-block: auto;
-      aspect-ratio: 75/65;
-    }
-    h2 {
-      font-family: "Pacifico", cursive;
-    }
-  }
-
-  &_rightcol {
-    position: relative;
-    display: flex;
-    justify-content: end;
-    align-content: center;
-    column-gap: 40px;
-    &_nav {
-      display: flex;
-      list-style: none;
-      column-gap: 25px;
-      padding-left: unset;
-
-      li {
-        display: flex;
-
-        .anchor {
-          margin-block: auto;
-          font-family: Lato, "sans-serif";
-          font-style: normal;
-          font-weight: 500;
-          font-size: 20px;
-          line-height: 24px;
-          text-decoration: unset;
-          color: black;
-          position: relative;
-          &:hover {
-            color: #1e486c !important;
-          }
-
-          &.active {
-            color: #1e486c !important;
-
-            &::after {
-              content: "";
-              height: 1px;
-              width: 100%;
-              position: absolute;
-              display: block;
-              background-color: #1e486c;
-              border-radius: 100px;
-              bottom: -5px;
-            }
-          }
-        }
-      }
-    }
-    &_account {
-      display: flex;
-      background: #1e486c;
-      border-radius: 10px;
-      margin-block: auto;
+   @media (max-width: 767px) {
       padding: 10px 20px;
-      position: relative;
-      width: fit-content;
-      justify-content: space-between;
-      transition: linear 0.3s all;
+   }
+   background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+   box-shadow: 0px -4px 27px rgba(0, 0, 0, 0.25);
 
-      &:hover {
-        cursor: pointer;
-        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
-      }
+   &_leftcol {
+      display: flex;
+      align-content: center;
+      column-gap: 20px;
+      justify-content: start;
 
-      &_pic {
-        aspect-ratio: 1;
-        width: 35px;
-        background-color: #b1fff6;
-        margin-block: auto;
-        border-radius: 100%;
+      img {
+         margin-block: auto;
+         aspect-ratio: 75/65;
       }
       h2 {
-        min-width: 100px;
-        font-family: "Lato";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 10px;
-        text-align: center;
-        /* identical to box height */
-
-        color: #ffffff;
+         font-family: "Pacifico", cursive;
       }
-    }
+   }
 
-    .my-account-Dropdown_wrapper {
-      position: absolute;
-      display: inline;
-      opacity: 0;
-      top: 100%;
-      transition: 0.3s all linear;
-      background-color: #1e486c;
-      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      overflow: hidden;
+   &_rightcol {
+      position: relative;
+      display: flex;
+      justify-content: end;
+      align-content: center;
+      column-gap: 40px;
+      &_nav {
+         @media (max-width: 1025px) {
+            display: none;
+         }
+         display: flex;
+         list-style: none;
+         column-gap: 25px;
+         padding-left: unset;
 
-      &.active {
-        opacity: 1;
+         li {
+            display: flex;
+
+            .anchor {
+               margin-block: auto;
+               font-family: Lato, "sans-serif";
+               font-style: normal;
+               font-weight: 500;
+               font-size: 20px;
+               line-height: 24px;
+               text-decoration: unset;
+               color: black;
+               position: relative;
+               &:hover {
+                  color: #1e486c !important;
+               }
+
+               &.active {
+                  color: #1e486c !important;
+
+                  &::after {
+                     content: "";
+                     height: 1px;
+                     width: 100%;
+                     position: absolute;
+                     display: block;
+                     background-color: #1e486c;
+                     border-radius: 100px;
+                     bottom: -5px;
+                  }
+               }
+            }
+         }
       }
+      &_account {
+         @media (max-width: 1025px) {
+            display: none;
+         }
+         display: flex;
+         background: #1e486c;
+         border-radius: 10px;
+         margin-block: auto;
+         padding: 10px 20px;
+         position: relative;
+         width: fit-content;
+         justify-content: space-between;
+         transition: linear 0.3s all;
 
-      ul {
-        padding: unset;
-        margin: unset;
+         &:hover {
+            cursor: pointer;
+            box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
+         }
 
-        li {
-          list-style: none;
-          padding: 15px 20px;
-          transition: all 0.3s linear;
-          &:hover {
-            background-color: #2d5d88;
-          }
-          a {
-            font-family: Lato, "sans-serif";
+         &_pic {
+            aspect-ratio: 1;
+            width: 35px;
+            background-color: #b1fff6;
+            margin-block: auto;
+            border-radius: 100%;
+         }
+         h2 {
+            min-width: 100px;
+            font-family: "Lato";
             font-style: normal;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 1px;
-            text-decoration: unset;
-            color: white;
-          }
-        }
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 10px;
+            text-align: center;
+            /* identical to box height */
+
+            color: #ffffff;
+         }
       }
-    }
-  }
+
+      .my-account-Dropdown_wrapper {
+         position: absolute;
+         display: inline;
+         opacity: 0;
+         top: 100%;
+         transition: 0.3s all linear;
+         background-color: #1e486c;
+         box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
+         border-radius: 10px;
+         overflow: hidden;
+
+         @media (max-width: 1025px) {
+            display: none;
+         }
+
+         &.active {
+            opacity: 1;
+         }
+
+         ul {
+            padding: unset;
+            margin: unset;
+
+            li {
+               list-style: none;
+               padding: 15px 20px;
+               transition: all 0.3s linear;
+               &:hover {
+                  background-color: #2d5d88;
+               }
+               a {
+                  font-family: Lato, "sans-serif";
+                  font-style: normal;
+                  font-weight: 300;
+                  font-size: 18px;
+                  line-height: 1px;
+                  text-decoration: unset;
+                  color: white;
+               }
+            }
+         }
+      }
+
+      &_nav-mobile {
+         @media (min-width: 1025px) {
+            display: none;
+         }
+         display: flex;
+         position: relative;
+         &_toggle {
+            margin-block: auto;
+            display: flex;
+            align-content: center;
+            transform: rotate(0deg);
+            transition: 0.7 ease-in-out all;
+
+            &.active {
+               transform: rotate(90deg);
+               transition: 0.7 ease-in-out all;
+            }
+
+            svg {
+               margin-block: auto;
+            }
+         }
+
+         &_menu {
+            position: fixed;
+            background-color: #1e486c;
+            min-width: 100vw;
+            left: 0px;
+            top: unset;
+            opacity: 0;
+            transition: 0.7s ease-in-out all;
+            z-index: 9;
+
+            @media (min-width: 1025px) {
+               display: none;
+            }
+
+            &.active {
+               opacity: 1;
+            }
+            ul {
+               padding-left: unset;
+            }
+            li {
+               list-style: none;
+               padding: 15px 20px;
+               transition: all 0.3s linear;
+               &:hover {
+                  background-color: #2d5d88;
+               }
+               a {
+                  font-family: Lato, "sans-serif";
+                  font-style: normal;
+                  font-weight: 300;
+                  font-size: 18px;
+                  line-height: 1px;
+                  text-decoration: unset;
+                  color: white;
+               }
+            }
+         }
+      }
+   }
 }
