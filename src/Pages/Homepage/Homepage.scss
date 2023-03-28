@@ -252,6 +252,10 @@
             display: flex;
             column-gap: 20px;
             padding: 20px 0px;
+            @media (max-width: 768px) {
+               flex-wrap: wrap;
+               row-gap: 20px;
+            }
          }
       }
 

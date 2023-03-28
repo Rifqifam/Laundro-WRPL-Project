@@ -1,0 +1,127 @@
+.footer_wrapper {
+   display: flex;
+   flex-wrap: wrap;
+   @media (min-width: 1025px) {
+      padding: 40px 80px;
+   }
+   @media (min-width: 768px) and (max-width: 1025px) {
+      padding: 30px 60px;
+   }
+   background: #1e486c;
+
+   &_leftcol {
+      padding: 20px;
+      @media (min-width: 1025px) {
+         max-width: 30%;
+      }
+      @media (min-width: 768px) and (max-width: 1025px) {
+         width: 40%;
+      }
+
+      p {
+         font-style: normal;
+         font-weight: 400;
+         line-height: 29px;
+         text-align: justify;
+
+         @media (min-width: 1025px) {
+            font-size: 24px;
+         }
+
+         @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 20px;
+         }
+         @media (max-width: 767px) {
+            font-size: 18px;
+         }
+
+         color: #ffffff;
+      }
+   }
+   &_midcol {
+      padding: 20px;
+      @media (min-width: 1025px) {
+         max-width: 30%;
+      }
+      @media (min-width: 768px) and (max-width: 1025px) {
+         width: 40%;
+      }
+
+      color: white;
+
+      ul {
+         padding: unset;
+         display: flex;
+         flex-direction: column;
+         gap: 40px;
+         li {
+            list-style: none;
+            a {
+               text-decoration: none;
+               font-family: "Lato";
+               font-style: normal;
+               font-weight: 500;
+               transition: 0.3s all;
+               @media (min-width: 1025px) {
+                  font-size: 24px;
+               }
+
+               @media (min-width: 768px) and (max-width: 1024px) {
+                  font-size: 20px;
+               }
+               @media (max-width: 767px) {
+                  font-size: 18px;
+               }
+               color: #ffffff;
+
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+   }
+
+   &_rightcol {
+      padding: 20px;
+      @media (min-width: 1025px) {
+         max-width: 30%;
+      }
+      @media (min-width: 768px) and (max-width: 1025px) {
+         width: 100%;
+      }
+
+      color: white;
+
+      ul {
+         padding: unset;
+         display: flex;
+         gap: 40px;
+         li {
+            list-style: none;
+            a {
+               text-decoration: none;
+               font-family: "Lato";
+               font-style: normal;
+               font-weight: 500;
+               transition: 0.3s all;
+               @media (min-width: 1025px) {
+                  font-size: 24px;
+               }
+
+               @media (min-width: 768px) and (max-width: 1024px) {
+                  font-size: 20px;
+               }
+               @media (max-width: 767px) {
+                  font-size: 18px;
+               }
+               color: #ffffff;
+
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+   }
+}
