@@ -26,7 +26,7 @@ function App() {
                <Route path='/' element={<Homepage />} />
                <Route path='/category' element={<Category />} />
                <Route path='/orders' element={<Orders />} />
-               <Route path='/singlelaundry' element={<SingleLaundry />} />
+               <Route path='/edu-kusuma-laundry' element={<SingleLaundry />} />
                <Route path='/useraccount' element={<UserAcc />} />
                <Route path='/category/oneday-service' element={<OneDay />} />
                <Route path='/category/one-customer' element={<OneCustomer />} />
