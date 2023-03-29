@@ -1,0 +1,38 @@
+.category_wrapper {
+   display: flex;
+   position: relative;
+   flex-direction: column;
+
+   &_banner {
+      background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.69) 100%
+         ),
+         url("../../Assets/Images/Banner.webp");
+   }
+
+   &_content {
+      @media (min-width: 768px) {
+         padding: 40px 140px;
+      }
+
+      @media (max-width: 768px) {
+         padding: 20px 20px;
+      }
+      display: grid;
+      grid-auto-rows: auto;
+      grid-gap: 40px;
+      @media (min-width: 1025px) {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 767px) {
+         grid-template-columns: 1fr;
+      }
+   }
+}
