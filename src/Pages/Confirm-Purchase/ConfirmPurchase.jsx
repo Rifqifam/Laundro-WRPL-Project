@@ -4,8 +4,12 @@ import "./ConfirmPurchase.scss";
 const ConfirmPurchase = () => {
   return (
     <div class="confirmpage_wrapper">
-      <div class="confirmpage_wrapper_title">Confirm Your Order</div>
       <div class="confirmpage_wrapper_input_input_wrapper">
+        <div className="confirmpage_wrapper_title_wrapper">
+          <h1 className="confirmpage_wrapper_title_wrapper_title">
+            Confirm Your Order
+          </h1>
+        </div>
         <div className="confirmpage_wrapper_input_input_wrapper_box">
           <label className="confirmpage_wrapper_input_name">Full Name</label>
           <input type="text" placeholder="Type here" />
@@ -35,21 +39,17 @@ const ConfirmPurchase = () => {
           <input type="text" placeholder="Type here" />
         </div>
         <div className="confirmpage_wrapper_input_input_wrapper_box">
-          <label className="confirmpage_wrapper_input_name">
-            Estimated Weight
-          </label>
+          <label className="confirmpage_wrapper_input_name">City</label>
           <input type="text" placeholder="Type here" />
         </div>
         <div>
-          <label className="confirmpage_wrapper_input_input_wrapper_price_price_title">
-            Total Price
-          </label>
+          <label className="confirmpage_wrapper_input_name">Total Price</label>
           <p className="confirmpage_wrapper_input_input_wrapper_price">
             Rp.20.000
           </p>
         </div>
-        <div>
-          <button className="confirmpage_wrapper_input_input_wrapper_button">
+        <div className="confirmpage_wrapper_button_wrapper">
+          <button className="confirmpage_wrapper_button_wrapper_button">
             Order Now
           </button>
         </div>
