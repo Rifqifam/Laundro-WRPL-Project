@@ -27,7 +27,6 @@ function App() {
                <Route path='/' element={<Homepage />} />
                <Route path='/category' element={<Category />} />
                <Route path='/orders' element={<Orders />} />
-               <Route path='/edu-kusuma-laundry' element={<SingleLaundry />} />
                <Route path='/useraccount' element={<UserAcc />} />
                <Route path='/category/oneday-service' element={<OneDay />} />
                <Route path='/category/one-customer' element={<OneCustomer />} />
@@ -35,7 +34,10 @@ function App() {
                <Route path='/category/three-hours' element={<ThreeHours />} />
                <Route path='/category/under-2-kg' element={<Under2Kg />} />
                <Route path='/category/washonly' element={<WashOnly />} />
-               <Route path="/confirmpurchase" element={<ConfirmPurchase />} />
+               <Route path='/confirmpurchase' element={<ConfirmPurchase />} />
+
+               {/* Single Laundry */}
+               <Route path='/category/:userId' element={<SingleLaundry />} />
             </Routes>
             <Footer />
          </Router>
