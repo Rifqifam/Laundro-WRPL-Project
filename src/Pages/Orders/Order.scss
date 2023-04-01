@@ -1,0 +1,44 @@
+.Order_wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  &_banner {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.69) 100%
+      ),
+      url("../../Assets/Images/homepage_banner.webp");
+  }
+
+  &_content {
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 38px;
+    margin-top: 0px;
+    &_text {
+      h2 {
+        margin: 0px 0px 20px 0px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 500;
+        line-height: 38px;
+        @media (min-width: 1025px) {
+          font-size: 32px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 26px;
+        }
+        @media (max-width: 767px) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
