@@ -3,20 +3,24 @@ import { NavLink, useParams } from "react-router-dom";
 import "./SingleLaundry.scss";
 
 import SingleLaundryImg from "../../Assets/Images/singlelaundry.webp";
-import datas from "../../Test-Database/Laundries.json";
+import datas from "../../Database/Laundries.json";
 
 const SingleLaundry = () => {
    const params = useParams();
-   const userId = params.userId;
-   const [Data, setData] = useState([]);
+   const userId = params.laundryId;
+   const catId = params.catId;
 
-   useEffect(() => {
-      setData(datas);
-   }, []);
-   const filteredData = Data.filter((index) => index.id == userId);
+   const [category] = useState(datas.database.categories);
+
+   const filteredCategories = category.filter(
+      (category) => category["cat-id"] == catId
+   );
+   const filteredLaundries = filteredCategories.flatMap((category) =>
+      category.laundries.filter((laundry) => laundry.id == userId)
+   );
    return (
       <>
-         {filteredData.map((laundry) => (
+         {filteredLaundries.map((laundry) => (
             <div className='singlelaundry_wrapper'>
                <div className='singlelaundry_wrapper_leftcol'>
                   <img src={SingleLaundryImg} alt='' />

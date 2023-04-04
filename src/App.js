@@ -37,7 +37,10 @@ function App() {
                <Route path='/confirmpurchase' element={<ConfirmPurchase />} />
 
                {/* Single Laundry */}
-               <Route path='/category/:userId' element={<SingleLaundry />} />
+               <Route
+                  path='/category/:catId/:laundryId'
+                  element={<SingleLaundry />}
+               />
             </Routes>
             <Footer />
          </Router>
