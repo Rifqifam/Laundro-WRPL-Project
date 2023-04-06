@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id       String  @id @db.VarChar(5)
+  username String? @db.VarChar(14)
+  password String? @db.VarChar(16)
+}
+
+model Customer {
+  id          String   @id @db.VarChar(7)
+  name        String?  @db.VarChar(20)
+  email       String?  @db.VarChar(36)
+  phonenumber String?  @db.VarChar(12)
+  address     String?  @db.VarChar(58)
+  password    String?  @db.VarChar(16)
+  Orders      Orders[]
+}
+
+model Orders {
+  id                                   String     @id @db.VarChar(7)
+  deliveryid                           String?    @db.VarChar(7)
+  storeid                              String?    @db.VarChar(6)
+  customerid                           String?    @db.VarChar(7)
+  ammountkg                            Int?
+  totalprice                           Int?
+  approval                             String?    @db.VarChar(8)
+  status                               String?    @db.VarChar(8)
+  daterecived                          DateTime?  @db.DateTime(0)
+  delivery_Orders_deliveryidTodelivery delivery?  @relation("Orders_deliveryidTodelivery", fields: [deliveryid], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "orders_ibfk_1")
+  Stores                               Stores?    @relation(fields: [storeid], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "orders_ibfk_2")
+  Customer                             Customer?  @relation(fields: [customerid], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "orders_ibfk_3")
+  delivery_delivery_orderidToOrders    delivery[] @relation("delivery_orderidToOrders")
+
+  @@index([customerid], map: "CustomerID")
+  @@index([deliveryid], map: "DeliveryID")
+  @@index([storeid], map: "StoreID")
+}
+
+model Stores {
+  id      String   @id @db.VarChar(6)
+  name    String?  @db.VarChar(22)
+  address String?  @db.VarChar(44)
+  price   Int?
+  adminid String?  @db.VarChar(5)
+  Orders  Orders[]
+
+  @@index([adminid], map: "ADMINID")
+}
+
+model delivery {
+  id                                 String   @id @db.VarChar(7)
+  start                              String?  @db.VarChar(44)
+  destination                        String?  @db.VarChar(58)
+  company                            String?  @db.VarChar(12)
+  orderid                            String?  @db.VarChar(7)
+  status                             String?  @db.VarChar(10)
+  Orders_Orders_deliveryidTodelivery Orders[] @relation("Orders_deliveryidTodelivery")
+  Orders_delivery_orderidToOrders    Orders?  @relation("delivery_orderidToOrders", fields: [orderid], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "deliverycons")
+
+  @@index([orderid], map: "deliverycons")
+}
