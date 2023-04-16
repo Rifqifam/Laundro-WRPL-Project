@@ -13,7 +13,7 @@ const LaundryBlock = (props) => {
             <p>{`Rp ${props.price} / kg`}</p>
          </div>
          <div className='laundryBlock_wrapper_btn'>
-            <NavLink to='/edu-kusuma-laundry'>Order Now</NavLink>
+            <NavLink to='/category/1/1'>Order Now</NavLink>
          </div>
       </div>
    );

@@ -41,7 +41,7 @@ const SingleLaundry = () => {
                   </div>
 
                   <button className='singlelaundry_wrapper_rightcol_btn'>
-                     <NavLink>Order Now</NavLink>
+                     <NavLink to='/confirmpurchase'>Order Now</NavLink>
                   </button>
                </div>
             </div>
