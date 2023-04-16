@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ConfirmPurchase.scss";
 
 const ConfirmPurchase = () => {
@@ -49,9 +50,11 @@ const ConfirmPurchase = () => {
           </p>
         </div>
         <div className="confirmpage_wrapper_button_wrapper">
-          <button className="confirmpage_wrapper_button_wrapper_button">
-            Order Now
-          </button>
+          <Link to="/payment">
+            <button className="confirmpage_wrapper_button_wrapper_button">
+              Order Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

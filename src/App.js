@@ -9,6 +9,7 @@ import Orders from "./Pages/Orders/Order";
 import SingleLaundry from "./Pages/Single-Laundry/SingleLaundry";
 import UserAcc from "./Pages/User-Account/UserAccount";
 import ConfirmPurchase from "./Pages/Confirm-Purchase/ConfirmPurchase";
+import Payment from "./Pages/Payment-Page/Payment";
 
 // Categories
 import OneDay from "./Pages/Categories/OnedayService/OnedayService";
@@ -35,6 +36,7 @@ function App() {
                <Route path='/category/under-2-kg' element={<Under2Kg />} />
                <Route path='/category/washonly' element={<WashOnly />} />
                <Route path='/confirmpurchase' element={<ConfirmPurchase />} />
+                <Route path="/payment" element={<Payment />} />
 
                {/* Single Laundry */}
                <Route
