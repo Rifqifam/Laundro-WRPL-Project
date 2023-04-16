@@ -9,6 +9,7 @@ import Orders from "./Pages/Orders/Order";
 import SingleLaundry from "./Pages/Single-Laundry/SingleLaundry";
 import UserAcc from "./Pages/User-Account/UserAccount";
 import ConfirmPurchase from "./Pages/Confirm-Purchase/ConfirmPurchase";
+import Payment from "./Pages/Payment-Page/Payment";
 
 // Categories
 import OneDay from "./Pages/Categories/OnedayService/OnedayService";
@@ -19,28 +20,29 @@ import Under2Kg from "./Pages/Categories/Under2Kg/Under2Kg";
 import WashOnly from "./Pages/Categories/WashOnly/WashOnly";
 
 function App() {
-   return (
-      <>
-         <Router>
-            <Header />
-            <Routes>
-               <Route path='/' element={<Homepage />} />
-               <Route path='/category' element={<Category />} />
-               <Route path='/orders' element={<Orders />} />
-               <Route path='/edu-kusuma-laundry' element={<SingleLaundry />} />
-               <Route path='/useraccount' element={<UserAcc />} />
-               <Route path='/category/oneday-service' element={<OneDay />} />
-               <Route path='/category/one-customer' element={<OneCustomer />} />
-               <Route path='/category/steam' element={<Steam />} />
-               <Route path='/category/three-hours' element={<ThreeHours />} />
-               <Route path='/category/under-2-kg' element={<Under2Kg />} />
-               <Route path='/category/washonly' element={<WashOnly />} />
-               <Route path="/confirmpurchase" element={<ConfirmPurchase />} />
-            </Routes>
-            <Footer />
-         </Router>
-      </>
-   );
+  return (
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/edu-kusuma-laundry" element={<SingleLaundry />} />
+          <Route path="/useraccount" element={<UserAcc />} />
+          <Route path="/category/oneday-service" element={<OneDay />} />
+          <Route path="/category/one-customer" element={<OneCustomer />} />
+          <Route path="/category/steam" element={<Steam />} />
+          <Route path="/category/three-hours" element={<ThreeHours />} />
+          <Route path="/category/under-2-kg" element={<Under2Kg />} />
+          <Route path="/category/washonly" element={<WashOnly />} />
+          <Route path="/confirmpurchase" element={<ConfirmPurchase />} />
+          <Route path="/payment" element={<Payment />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
+  );
 }
 
 export default App;
