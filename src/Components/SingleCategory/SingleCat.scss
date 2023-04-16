@@ -1,13 +1,13 @@
 .Singlecat_wrapper {
-   display: flex;
-   flex-direction: column;
-   row-gap: 40px;
-   &_banner {
-      background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.69) 100%
-         ),
-         url("../../Assets/Images/singlecatbanner.webp");
-   }
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  &_banner {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.69) 100%
+      ),
+      url("../../Assets/Images/singlecatbanner.webp");
+  }
 }

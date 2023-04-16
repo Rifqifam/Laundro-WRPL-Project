@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Edu Kusuma Laundry",
+    "date": "27-03-2023, 17:30",
+    "price": 24000,
+    "status": "Order Placed"
+  },
+  {
+    "id": 2,
+    "name": "Edu Kusuma Laundry",
+    "date": "25-03-2023, 12:30",
+    "price": 17000,
+    "status": "Cleaning on Progress"
+  },
+  {
+    "id": 3,
+    "name": "Edu Kusuma Laundry",
+    "date": "23-03-2023, 18:30",
+    "price": 20000,
+    "status": "Cleaning Done"
+  }
+]

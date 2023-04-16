@@ -1,0 +1,42 @@
+{
+   "database": {
+      "categories": [
+         {
+            "cat-id": 1,
+            "name": "category1",
+            "laundries": [
+               {
+                  "id": 1,
+                  "name": "Edu Kusuma Laundry",
+                  "desc": "Edu Kusuma Laundry is a professional laundry service provider that aims to provide high-quality and efficient laundry solutions to its customers.",
+                  "price": "1.500"
+               },
+               {
+                  "id": 2,
+                  "name": "laundry2",
+                  "desc": "Flower Laundry is a professional laundry service provider that aims to provide high-quality and efficient laundry solutions to its customers.",
+                  "price": "2.500"
+               }
+            ]
+         },
+         {
+            "cat-id": 2,
+            "name": "category2",
+            "laundries": [
+               {
+                  "id": 1,
+                  "name": "Shikamaru Laundry",
+                  "desc": "Shikamaru Laundry is a professional laundry service provider that aims to provide high-quality and efficient laundry solutions to its customers.",
+                  "price": "3.500"
+               },
+               {
+                  "id": 2,
+                  "name": "Naruto Laundry",
+                  "desc": "Naruto Laundry is a professional laundry service provider that aims to provide high-quality and efficient laundry solutions to its customers.",
+                  "price": "4.500"
+               }
+            ]
+         }
+      ]
+   }
+}
