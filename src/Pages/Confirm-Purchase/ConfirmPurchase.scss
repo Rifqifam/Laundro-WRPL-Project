@@ -63,14 +63,14 @@
             box-sizing: border-box;
           }
 
-          input[type="text"]:focus {
+          input:focus {
             outline: none;
           }
         }
       }
 
       &_box {
-        input[type="text"] {
+        input {
           width: 100%;
           height: 100%;
           border: none;
